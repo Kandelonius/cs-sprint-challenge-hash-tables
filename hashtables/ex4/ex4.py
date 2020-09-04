@@ -1,8 +1,14 @@
+
 def has_negatives(a):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+    values = {}
+    result = []
+    # print(a)
+    for num in a:
+        if abs(num) not in values:
+            values[abs(num)] = 0
+        values[abs(num)] += 1
+        if values[abs(num)] > 1:
+            result.append(abs(num))
 
     return result
 

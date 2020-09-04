@@ -1,8 +1,18 @@
+
 def intersection(arrays):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+    storage = {}
+    result = []
+    # print(len(arrays))
+    for list in arrays:
+        # print(item)
+        for num in list:
+            if num not in storage:
+                storage[num] = 0
+            storage[num] += 1
+            if storage[num] == len(arrays):
+                result.append(num)
+                print(f"num is {num}")
+    print(f"result is {result}")
 
     return result
 
