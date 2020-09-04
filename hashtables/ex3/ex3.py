@@ -1,5 +1,4 @@
 
-
 def intersection(arrays):
     storage = {}
     result = []
